@@ -153,6 +153,7 @@ func main() {
 	})
 	go func() {
 		<-handler.Done
+		time.Sleep(time.Second * 30)
 		server.Shutdown(context.Background())
 	}()
 
